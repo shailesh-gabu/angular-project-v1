@@ -4,4 +4,5 @@
 <label for="">password</label>
 <input id="password" type="text" [(ngModel)]="password">
 <br><br>
-<button (click)="onLogin()">login</button>
+<!-- <button (click)="onLogin()">login</button> -->
+<button *ngIf="!isLoggedIn()" (click)="onLogin()">Login</button>
