@@ -1,0 +1,224 @@
+@import "dark.scss";
+@import "light.scss";
+
+// mixin that enables css variables in light mode
+@mixin lighten() {
+  // body-bg-color
+  --body-bg-color: #{$body-bg-color-light};
+
+  //sidebar-color
+  --sidebar-bg-color: #{$sidebar-bg-color-light};
+  --sidebar-hover-bg-color: #{$sidebar-hover-bg-color-light};
+  --sidebar-text-color: #{$sidebar-text-color-light};
+  --sidebar-hover-text-color: #{$sidebar-hover-text-color-light};
+
+  //dashboard-main-card-color
+  --dashboard-card-1: #{$dashboard-card-1-light};
+  --dashboard-card-2: #{$dashboard-card-2-light};
+  --dashboard-card-3: #{$dashboard-card-3-light};
+  // admin-dashboard-main-card-color
+  --admin-dashboard-card-1: #{$admin-dashboard-card-1-light};
+  --admin-dashboard-card-2: #{$admin-dashboard-card-2-light};
+  --admin-dashboard-card-3: #{$admin-dashboard-card-3-light};
+  //main-color
+
+  --primary-color: #{$primary-color-light};
+  --secondary-color: #{$secondary-color-light};
+  --light-color: #{$light-color-light};
+  --dark-color: #{$dark-color-light};
+  --dark-light-color: #{$dark-light-color-light};
+  // text-color
+  --primary-text-color: #{$primary-color-light};
+  --primary-dark-text-color: #{$dark-color-light};
+  --secondary-text-color: #{$secondary-color-light};
+  --success-text-color: #{$success-color-light};
+  --secondary-info-text-color: #{$secondary-info-color-light};
+  --dark-light-text-color: #{$dark-light-color-light};
+  --light-text-color: #{$light-color-light};
+
+  // text-size
+  --text-size-extra-large: clamp(18px, 2vw, 22px);
+  --text-size-large: clamp(16px, 2vw, 18px);
+  --text-size-extra-medium: clamp(14px, 2vw, 16px);
+  --text-size-medium: clamp(13px, 2vw, 15px);
+  --text-size-small: clamp(11px, 2vw, 13px);
+  --text-size-extra-small: clamp(9px, 2vw, 11px);
+
+  //normal-background
+  --main-bg-color: #{$bg-color-main-light};
+  --primary-bg-color: #{$primary-color-light};
+  --secondary-bg-color: #{$secondary-color-light};
+
+  // linear-background-color
+  --primary-linear-bg-color: #{$primary-bg-color-light};
+  --primary-light-linear-bg-color: #{$primary-light-bg-color-light};
+  --secondary-linear-bg-color: #{$secondary-bg-color-light};
+  --secondary-light-linear-bg-color: #{$secondary-light-bg-color-light};
+  --dark-linear-bg-color: #{$dark-bg-color-light};
+  --dark-light-linear-bg-color: #{$dark-light-bg-color-light};
+  --success-linear-bg-color: #{$success-bg-color-light};
+  --success-light-linear-bg-color: #{$success-light-bg-color-light};
+
+  // transparent-bg-color
+  --transparent-primary-bg-color: #{$transparent-primary-bg-color-light};
+  --transparent-dark-bg-color: #{$transparent-dark-bg-color-light};
+  --transparent-danger-bg-color: #{$transparent-danger-bg-color-light};
+  --transparent-success-bg-color: #{$transparent-success-bg-color-light};
+  --transparent-warning-bg-color: #{$transparent-warning-bg-color-light};
+  --transparent-info-bg-color: #{$transparent-info-bg-color-light};
+
+  // buttons-color
+  --primary-btn-bg-color: #{$secondary-bg-color-light};
+  --primary-btn-text-color: #{$light-color-light};
+  --primary-btn-border-color: #{$secondary-color-light};
+  --primary-btn-hover-bg-color: #{$primary-btn-bg-hover-color-light};
+  --disable-primary-btn-bg-color: #{$disable-primary-btn-bg-color-light};
+
+  --secondary-btn-bg-color: #{$dark-bg-color-light};
+  --secondary-btn-text-color: #{$primary-color-light};
+  --secondary-btn-border-color: #{$dark-color-light};
+  --secondary-btn-hover-bg-color: #{$secondary-btn-bg-hover-color-light};
+
+  --success-btn-bg-color: #{$success-bg-color-light};
+  --success-btn-text-color: #{$light-color-light};
+  --success-btn-border-color: #{$success-color-light};
+  --success-btn-hover-bg-color: #{$success-btn-bg-hover-color-light};
+
+  --secondary-success-btn-bg-color: #{$success-light-bg-color-light};
+  --secondary-success-btn-text-color: #{$primary-color-light};
+  --secondary-success-btn-border-color: #{$primary-color-light};
+  --secondary-success-btn-hover-bg-color: #{$secondary-success-btn-bg-hover-color-light};
+
+  //input-color
+  --input-text-color: #{$primary-color-light};
+  --input-bg-color: #{$primary-bg-color-light};
+  --input-border-color: #{$dark-color-light};
+  --input-placeholder-color: #{$dark-color-light};
+  --input-label-color:#{$dark-color-light};
+
+  //checkbox-color
+  // 1-primary
+  // un-checked
+  --primary-checkbox-bg-color: #{$bg-color-main-light};
+  --primary-checkbox-border-color: #{$secondary-color-light};
+  // checked
+  --primary-checkbox-checked-bg-color: #{$secondary-color-light};
+
+  // 2-secondary
+  // un-checked
+  --secondary-checkbox-bg-color: #{$bg-color-main-light};
+  --secondary-checkbox-border-color: #{$success-color-light};
+  // checked
+  --secondary-checkbox-checked-bg-color: #{$success-color-light};
+}
+
+// mixin that enables css variables in dark mode
+@mixin darken() {
+  // body-bg-color
+  --body-bg-color: #{$body-bg-color-dark};
+
+  //sidebar-color
+  --sidebar-bg-color: #{$sidebar-bg-color-dark};
+  --sidebar-hover-bg-color: #{$sidebar-hover-bg-color-dark};
+  --sidebar-text-color: #{$sidebar-text-color-dark};
+  --sidebar-hover-text-color: #{$sidebar-hover-text-color-dark};
+
+  //dashboard-main-card-color
+  --dashboard-card-1: #{$dashboard-card-1-dark};
+  --dashboard-card-2: #{$dashboard-card-2-dark};
+  --dashboard-card-3: #{$dashboard-card-3-dark};
+  // admin-dashboard-main-card-color
+  --admin-dashboard-card-1: #{$admin-dashboard-card-1-dark};
+  --admin-dashboard-card-2: #{$admin-dashboard-card-2-dark};
+  --admin-dashboard-card-3: #{$admin-dashboard-card-3-dark};
+
+  //main-color
+  --primary-color: #{$primary-color-dark};
+  --secondary-color: #{$secondary-color-dark};
+  --light-color: #{$light-color-dark};
+  --dark-color: #{$dark-color-dark};
+  --dark-light-color: #{$dark-light-color-dark};
+  // text-color
+  --primary-text-color: #{$primary-color-dark};
+  --primary-dark-text-color: #{$dark-color-dark};
+  --secondary-text-color: #{$secondary-color-dark};
+  --success-text-color: #{$success-color-dark};
+  --secondary-info-text-color: #{$secondary-info-color-dark};
+  --dark-light-text-color: #{$dark-light-color-dark};
+  --light-text-color: #{$light-color-dark};
+
+  // text-size
+  --text-size-extra-large: clamp(18px, 2vw, 22px);
+  --text-size-large: clamp(16px, 2vw, 18px);
+  --text-size-extra-medium: clamp(14px, 2vw, 16px);
+  --text-size-medium: clamp(13px, 2vw, 15px);
+  --text-size-small: clamp(11px, 2vw, 13px);
+  --text-size-extra-small: clamp(9px, 2vw, 11px);
+
+  //normal-background
+  --main-bg-color: #{$bg-color-main-dark};
+  --primary-bg-color: #{$primary-color-dark};
+  --secondary-bg-color: #{$secondary-color-dark};
+  // linear-background-color
+  --primary-linear-bg-color: #{$primary-bg-color-dark};
+  --primary-light-linear-bg-color: #{$primary-light-bg-color-dark};
+  --secondary-linear-bg-color: #{$secondary-bg-color-dark};
+  --secondary-light-linear-bg-color: #{$secondary-light-bg-color-dark};
+  --dark-linear-bg-color: #{$dark-bg-color-dark};
+  --dark-light-linear-bg-color: #{$dark-light-bg-color-dark};
+  --success-linear-bg-color: #{$success-bg-color-dark};
+  --success-light-linear-bg-color: #{$success-light-bg-color-dark};
+
+  // transparent-bg-color
+  --transparent-primary-bg-color: #{$transparent-primary-bg-color-dark};
+  --transparent-dark-bg-color: #{$transparent-dark-bg-color-dark};
+  --transparent-danger-bg-color: #{$transparent-danger-bg-color-dark};
+  --transparent-success-bg-color: #{$transparent-success-bg-color-dark};
+  --transparent-warning-bg-color: #{$transparent-warning-bg-color-dark};
+  --transparent-info-bg-color: #{$transparent-info-bg-color-dark};
+
+  // buttons-color
+  --primary-btn-bg-color: #{$secondary-bg-color-dark};
+  --primary-btn-text-color: #{$light-color-dark};
+  --primary-btn-border-color: #{$secondary-color-dark};
+  --primary-btn-hover-bg-color: #{$primary-btn-bg-hover-color-dark};
+
+  --disable-primary-btn-bg-color: #{$disable-primary-btn-bg-color-dark};
+
+  --secondary-btn-bg-color: #{$dark-bg-color-dark};
+  --secondary-btn-text-color: #{$primary-color-dark};
+  --secondary-btn-border-color: #{$dark-color-dark};
+  --secondary-btn-hover-bg-color: #{$secondary-btn-bg-hover-color-dark};
+
+  --success-btn-bg-color: #{$success-bg-color-dark};
+  --success-btn-text-color: #{$light-color-dark};
+  --success-btn-border-color: #{$success-color-dark};
+  --success-btn-hover-bg-color: #{$success-btn-bg-hover-color-dark};
+
+  --secondary-success-btn-bg-color: #{$success-light-bg-color-dark};
+  --secondary-success-btn-text-color: #{$primary-color-dark};
+  --secondary-success-btn-border-color: #{$primary-color-dark};
+  --secondary-success-btn-hover-bg-color: #{$secondary-success-btn-bg-hover-color-dark};
+
+  //input-color
+  --input-text-color: #{$primary-color-dark};
+  --input-bg-color: #{$primary-bg-color-dark};
+  --input-border-color: #{$dark-color-dark};
+  --input-placeholder-color: #{$dark-light-color-dark};
+  --input-label-color:#{$dark-color-dark};
+
+  //checkbox-color
+  // 1-primary
+  // un-checked
+  --primary-checkbox-bg-color: #{$bg-color-main-dark};
+  --primary-checkbox-border-color: #{$secondary-color-dark};
+  // checked
+  --primary-checkbox-checked-bg-color: #{$secondary-color-dark};
+
+  // 2-secondary
+  // un-checked
+  --secondary-checkbox-bg-color: #{$bg-color-main-dark};
+  --secondary-checkbox-border-color: #{$success-color-dark};
+  // checked
+  --secondary-checkbox-checked-bg-color: #{$success-color-dark};
+}

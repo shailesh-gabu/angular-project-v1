@@ -1,2 +1,16 @@
-<p>home works!</p>
+<div class="main-search-wrapper">
+    <form class="search-bar">
+        <mat-form-field class="auto-complete-control">
+
+            <input type="text" placeholder="Search Student ID" aria-label="Number" matInput [formControl]="myControl"
+                [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="onOptionSelected($event)">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option.registerNo">
+                    {{option.registerNo}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+</div>
+<app-student-details *ngIf="selectedStudentData" [selectedStudentData]="selectedStudentData"></app-student-details>
 <button (click)="onLogout()">Logout</button>
