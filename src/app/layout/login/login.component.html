@@ -1,8 +1,54 @@
-<label for="">name</label>
-<input id="name" type="text" [(ngModel)]="name">
-<br><br>
-<label for="">password</label>
-<input id="password" type="text" [(ngModel)]="password">
-<br><br>
-<!-- <button (click)="onLogin()">login</button> -->
-<button *ngIf="!isLoggedIn()" (click)="onLogin()">Login</button>
+<div class="text-center d-flex flex-column align-items-center mt-5">
+    <div class="col-lg-4 col-md-6 col-sm-10 col-11 text-start border border-primary rounded">
+        <div class="card w-100 p-2 bg-primary">
+            <div class="brand-logo w-100 d-flex justify-content-center text-center">
+                <img class="w-25 h-25 card-img-top" src="../../../assets/brand-logo.png" alt="...">
+            </div>
+            <div class="card-body">
+                <p class="card-text text-center fw-bold fs-4 text-light">GUJARAT TECHNOLOGICAL UNIVERSITY.</p>
+            </div>
+        </div>
+
+        <div class="w-100 text-start p-4">
+            <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="form text-input">
+                <div class="input-group d-flex flex-column align-items-center mb-3 mt-1">
+                    <input type="text" formControlName="userName" class="form-control w-100 mb-3 rounded"
+                        placeholder="Enrollment No / Username" aria-label="Example text with button addon">
+                    <input type="text" formControlName="password" class="form-control w-100 rounded"
+                        placeholder="Password" aria-label="Example text with button addon">
+                </div>
+                <div class="input-group d-flex align-items-center justify-content-between gy-5d  mb-3 mt-1">
+                    <input type="text" formControlName="captcha" class="form-control w-50 mw-50"
+                        placeholder="Captcha code" aria-label="Example text with button addon">
+                    <input type="text" style="min-width: 85px; max-width: 85px;" value=""
+                        class="form-control mx-2 text-center" [value]="generatedCaptcha" placeholder="captcha"
+                        aria-label="Example text with button addon" disabled>
+                    <i (click)="generate()" class="fas fa-sync-alt mx-2" style="cursor: pointer;"></i>
+                </div>
+
+                <button *ngIf="!isOtpSend" id="submitForm" type="submit" class="btn btn-primary w-100"
+                    [disabled]='!loginForm.valid'>Send
+                    OTP To
+                    Registered
+                    Email</button>
+            </form>
+            <form (ngSubmit)="onOtpSubmit()" [formGroup]="otpForm" class="form text-input">
+                <div class="w-100 text-center" *ngIf="isOtpSend">
+                    <p class="my-1">OTP has been send your register email ID. <br>Check Your Inbox<br> </p>
+                    <div class="input-group d-flex flex-column align-items-center mb-3 mt-1">
+                        <input type="number" formControlName="userOtp" class="form-control w-50 my-2 text-center"
+                            placeholder="Enter Otp" aria-label="Example text with button addon">
+                        <button id="Verify" type="submit" class="btn btn-primary w-100"
+                            [disabled]="!otpForm.valid">Verify</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="w-100 text-center px-4">
+            <p>For Registered Student: Check your registered email ID for OTP to login to the student portal.</p>
+
+            <p>Note : Students who have already registerd themselves for recheck/reassment can use the same username
+                and password to login to this portal.</p>
+        </div>
+    </div>
+</div>
