@@ -16,7 +16,6 @@ export class LoginComponent {
   generatedCaptcha: any;
 
   constructor(private fb: FormBuilder, public router: Router) {
-    console.log('logindata', this.loginForm);
     this.generate();
   }
 
@@ -38,7 +37,7 @@ export class LoginComponent {
     console.log(studentPassword, studentUsername, enteredCaptcha);
 
     if (this.generatedCaptcha == enteredCaptcha) {
-      if (studentUsername == '11111111' && studentPassword == 22222222) {
+      if (studentUsername == '164960' && studentPassword == '20072003') {
         this.isOtpSend = true;
         this.otp = Math.floor(Math.random() * 10000);
         this.sendEmailOtp();
