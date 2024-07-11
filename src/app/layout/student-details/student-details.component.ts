@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { studentList } from 'src/app/shared/constant';
 
 @Component({
   selector: 'app-student-details',
@@ -8,8 +9,18 @@ import { Router } from '@angular/router';
 })
 export class StudentDetailsComponent {
   @Input() selectedStudentData: any;
-  constructor(public router: Router) {
-    console.log('selectedStudentData', this.selectedStudentData);
+  studentData = studentList;
+  details: any;
+  constructor(private route: ActivatedRoute, public router: Router) {}
+
+  ngOnInit() {
+    this.route.queryParams.subscribe((params) => {
+      this.studentData.map((item) => {
+        if (item.registerNo == params['registerNo']) {
+          this.details = item;
+        }
+      });
+    });
   }
 
   logout() {

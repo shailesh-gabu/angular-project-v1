@@ -10,38 +10,37 @@
         </div>
         <div class="text-center d-flex justify-content-center">
             <div class="card w-100 p-3 text-start">
-                <img src="../../../assets/default-avatar.jpg" class="mx-auto" style="height: 150px; width: 150px;"
-                    alt="...">
+                <img [src]="details.profile" class="mx-auto" style="height: 150px; width: 150px;" alt="...">
                 <div class="card-body">
-                    <h3 class="card-title text-center fw-bold fs-5">VAGHELA HITESH RAMESHBHAI</h3>
+                    <h3 class="card-title text-center fw-bold fs-5">{{details.name}}</h3>
                     <div class="d-flex justify-content-between">
                         <span class="col-6 fw-bold">Reg. No</span>
-                        <span class="col-6">: 164960</span>
+                        <span class="col-6">: {{details.registerNo}}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                         <span class="col-6 fw-bold">Date of Reg.</span>
-                        <span class="col-6">: MAY 2021</span>
+                        <span class="col-6">: {{details.registrationDate}}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                         <span class="col-6 fw-bold">Qualification</span>
-                        <span class="col-6">: Dialysis Technology</span>
+                        <span class="col-6">: {{details.Qualification}}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                         <span class="col-6 fw-bold">State</span>
-                        <span class="col-6">: Gujarat</span>
+                        <span class="col-6">: {{details.state}}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                         <span class="col-6 fw-bold">District</span>
-                        <span class="col-6">: Jamnagar</span>
+                        <span class="col-6">: {{details.district}}</span>
                     </div>
                     <div class="d-flex justify-content-between">
                         <span class="col-6 fw-bold">Status</span>
-                        <span class="col-6">: Pass</span>
+                        <span class="col-6">: {{details.Status}}</span>
                     </div>
                     <div class="d-flex">
                         <span class="col-6 fw-bold">Download Doc</span>
-                        <a class="col-6" href="./../../../assets/vaghela-hitesh.pdf" target="_blank"
-                            download="vaghela-hitesh.pdf" class="download-button">: Download Link</a>
+                        <a class="col-6" [href]="details.document" target="_blank" download="Student-Documents.pdf"
+                            class="download-button">: Download Link</a>
                     </div>
                     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>

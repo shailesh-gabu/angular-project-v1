@@ -5,6 +5,10 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 
 const routes: Routes = [
   {
+    path: '',
+    component: LoginComponent,
+  },
+  {
     path: 'login',
     component: LoginComponent,
   },
